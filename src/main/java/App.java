@@ -3,7 +3,6 @@
  *  Copyright 2021 Edmund Johnson V
  */
 
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -67,8 +66,7 @@ public class App {
 
     private static String output(float p, float i, float y, float n){
         double total = p * (Math.pow((1 + ((i / 100) / n)), (n * y)));
-        BigDecimal d = new BigDecimal(Double.toString(total));
         DecimalFormat dc = new DecimalFormat("#.##");
-        return "$" + dc.format(p) + " invested at " + dc.format(i) + "% for " + dc.format(y) + " years compounded " + dc.format(n) + " times per year is $" + dc.format(d) + ".";
+        return "$" + dc.format(p) + " invested at " + dc.format(i) + "% for " + dc.format(y) + " years compounded " + dc.format(n) + " times per year is $" + dc.format(total) + ".";
     }
 }
