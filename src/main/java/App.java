@@ -69,6 +69,6 @@ public class App {
         double total = p * (Math.pow((1 + ((i / 100) / n)), (n * y)));
         BigDecimal d = new BigDecimal(Double.toString(total));
         DecimalFormat dc = new DecimalFormat("#.##");
-        return "$" + dc.format(p) + " invested at " + dc.format(i) + "% for " + dc.format(y) + " years compounded " + dc.format(n) + " times per year is $" + dc.format(total) + ".";
+        return "$" + dc.format(p) + " invested at " + dc.format(i) + "% for " + dc.format(y) + " years compounded " + dc.format(n) + " times per year is $" + dc.format(d) + ".";
     }
 }
